@@ -78,10 +78,18 @@ lib/
 
 ## 📸 Screenshots
 
-| Login | Catalog | Services | Bag |
-| :---: | :---: | :---: | :---: |
-| ![Login](https://via.placeholder.com/200x400?text=Login+Screen) | ![Catalog](https://via.placeholder.com/200x400?text=Catalog+Screen) | ![Services](https://via.placeholder.com/200x400?text=Services+Screen) | ![Bag](https://via.placeholder.com/200x400?text=Bag+Screen) |
+<p align="center">
+  <img src="images/login.jpeg" alt="Login Screen" width="220" />
+  <img src="images/catalog.jpeg" alt="Catalog Screen" width="220" />
+</p>
 
-*Note: Replace placeholders with actual screenshots from the `assets` folder.*
+<p align="center">
+  <img src="images/service.jpeg" alt="Services Screen" width="220" />
+  <img src="images/cart.jpeg" alt="Bag Screen" width="220" />
+</p>
+
+<p align="center">
+  <img src="images/snackBar.jpeg" alt="Success Snackbar" width="220" />
+</p>
 
 ---
