@@ -20,36 +20,37 @@ class MyLogin extends StatelessWidget {
                   'Welcome\nback.',
                   style: TextStyle(
                     fontFamily: 'Corben',
-                    fontSize: 48,
+                    fontSize: 52, // Increased from 48
                     fontWeight: FontWeight.w900,
                     color: AppColors.textPrimary,
-                    height: 1.1,
-                    letterSpacing: -1,
+                    height: 1.05, // Tightened line height
+                    letterSpacing: -1.5,
                   ),
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 16), // Increased from 12
                 const Text(
                   'Sign in to continue shopping.',
                   style: TextStyle(
                     color: AppColors.textSecondary,
-                    fontSize: 15,
+                    fontSize: 16, // Slightly larger
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
-                const SizedBox(height: 52),
+                const SizedBox(height: 60), // Increased from 52
                 const _DarkTextField(
                   hint: 'Username',
                   icon: Icons.alternate_email_rounded,
                 ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 20), // Increased from 16
                 const _DarkTextField(
                   hint: 'Password',
                   icon: Icons.lock_outline_rounded,
                   isPassword: true,
                 ),
-                const SizedBox(height: 40),
+                const SizedBox(height: 48), // Adjusted from 40
                 SizedBox(
                   width: double.infinity,
-                  height: 58,
+                  height: 62, // Increased from 58
                   child: ElevatedButton(
                     onPressed: () => context.pushReplacement('/catalog'),
                     style: ElevatedButton.styleFrom(
@@ -57,15 +58,15 @@ class MyLogin extends StatelessWidget {
                       foregroundColor: AppColors.primaryText,
                       elevation: 0,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18),
+                        borderRadius: BorderRadius.circular(20), // More rounded
                       ),
                     ),
                     child: const Text(
                       'SIGN IN',
                       style: TextStyle(
                         fontWeight: FontWeight.w900,
-                        letterSpacing: 2,
-                        fontSize: 14,
+                        letterSpacing: 1.5,
+                        fontSize: 15,
                       ),
                     ),
                   ),

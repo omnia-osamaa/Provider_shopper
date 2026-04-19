@@ -213,7 +213,7 @@ class _CartTotal extends StatelessWidget {
             const SizedBox(height: 20),
             SizedBox(
               width: double.infinity,
-              height: 58,
+              height: 64, // Increased from 58
               child: ElevatedButton(
                 onPressed: cart.items.isEmpty
                     ? null
@@ -221,40 +221,48 @@ class _CartTotal extends StatelessWidget {
                         ScaffoldMessenger.of(context).hideCurrentSnackBar();
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
-                            content: const Directionality(
+                            content: Directionality(
                               textDirection: TextDirection.rtl,
                               child: Row(
                                 children: [
-                                  Icon(
-                                    Icons.check_circle_rounded,
-                                    color: Colors.white,
-                                    size: 22,
+                                  Container(
+                                    padding: const EdgeInsets.all(4),
+                                    decoration: const BoxDecoration(
+                                      color: Colors.white24,
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: const Icon(
+                                      Icons.check_rounded,
+                                      color: Colors.white,
+                                      size: 16,
+                                    ),
                                   ),
-                                  SizedBox(width: 12),
-                                  Expanded(
+                                  const SizedBox(width: 14),
+                                  const Expanded(
                                     child: Text(
                                       'تم إرسال الطلب بنجاح',
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontWeight: FontWeight.w800,
-                                        fontSize: 14,
+                                        fontSize: 15,
+                                        letterSpacing: 0.2,
                                       ),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
-                            backgroundColor: const Color(0xFF1F7A4D),
+                            backgroundColor: const Color(0xFF1B5E20), // Deeper green
                             behavior: SnackBarBehavior.floating,
-                            elevation: 0,
-                            margin: const EdgeInsets.fromLTRB(16, 0, 16, 20),
+                            elevation: 8,
+                            margin: const EdgeInsets.fromLTRB(16, 0, 16, 24),
                             padding: const EdgeInsets.symmetric(
-                              horizontal: 16,
-                              vertical: 14,
+                              horizontal: 20,
+                              vertical: 16,
                             ),
-                            duration: const Duration(seconds: 3),
+                            duration: const Duration(seconds: 4),
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(16),
+                              borderRadius: BorderRadius.circular(20),
                             ),
                           ),
                         );
@@ -265,7 +273,7 @@ class _CartTotal extends StatelessWidget {
                   foregroundColor: AppColors.primaryText,
                   elevation: 0,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18),
+                    borderRadius: BorderRadius.circular(22), // More rounded
                   ),
                 ),
                 child: const Text(
@@ -273,7 +281,7 @@ class _CartTotal extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.w900,
                     letterSpacing: 0,
-                    fontSize: 14,
+                    fontSize: 16, // Slightly larger
                   ),
                 ),
               ),

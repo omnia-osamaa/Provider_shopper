@@ -94,16 +94,16 @@ class ServiceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(18),
+      padding: const EdgeInsets.all(20), // Increased from 18
       decoration: BoxDecoration(
         color: AppColors.surface,
-        borderRadius: BorderRadius.circular(24),
-        border: Border.all(color: AppColors.border, width: 1),
-        boxShadow: const [
+        borderRadius: BorderRadius.circular(28), // More rounded
+        border: Border.all(color: AppColors.border, width: 1.2),
+        boxShadow: [
           BoxShadow(
-            color: Color(0x22000000),
-            blurRadius: 18,
-            offset: Offset(0, 10),
+            color: Colors.black.withOpacity(0.35),
+            blurRadius: 20,
+            offset: const Offset(0, 10),
           ),
         ],
       ),
@@ -114,19 +114,23 @@ class ServiceCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                width: 54,
-                height: 54,
+                width: 60, // Slightly larger
+                height: 60,
                 decoration: BoxDecoration(
-                  color: AppColors.primary,
-                  borderRadius: BorderRadius.circular(16),
+                  gradient: const LinearGradient(
+                    colors: [AppColors.primary, Color(0xFFFFD700)],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  borderRadius: BorderRadius.circular(18),
                 ),
                 child: Icon(
                   service.icon,
                   color: AppColors.primaryText,
-                  size: 24,
+                  size: 28, // Slightly larger
                 ),
               ),
-              const SizedBox(width: 14),
+              const SizedBox(width: 16),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -135,18 +139,18 @@ class ServiceCard extends StatelessWidget {
                       service.title,
                       style: const TextStyle(
                         color: AppColors.textPrimary,
-                        fontSize: 16,
+                        fontSize: 18, // Slightly larger
                         fontWeight: FontWeight.w800,
-                        letterSpacing: -0.3,
+                        letterSpacing: -0.4,
                       ),
                     ),
-                    const SizedBox(height: 6),
+                    const SizedBox(height: 8),
                     Text(
                       service.description,
                       style: const TextStyle(
                         color: AppColors.textSecondary,
-                        fontSize: 13,
-                        height: 1.6,
+                        fontSize: 14,
+                        height: 1.5,
                       ),
                     ),
                   ],
@@ -154,12 +158,12 @@ class ServiceCard extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 20),
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
             decoration: BoxDecoration(
               color: AppColors.surfaceAlt,
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(18),
               border: Border.all(color: AppColors.borderAlt),
             ),
             child: const Row(
@@ -169,13 +173,13 @@ class ServiceCard extends StatelessWidget {
                   style: TextStyle(
                     color: AppColors.textPrimary,
                     fontSize: 13,
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w800,
                   ),
                 ),
                 Spacer(),
                 Icon(
                   Icons.arrow_forward_rounded,
-                  color: AppColors.iconMuted,
+                  color: AppColors.primary, // Thematic color for the arrow
                   size: 18,
                 ),
               ],

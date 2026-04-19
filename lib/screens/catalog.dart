@@ -82,19 +82,19 @@ class _MyAppBar extends StatelessWidget {
     return SliverAppBar(
       backgroundColor: AppColors.background,
       surfaceTintColor: Colors.transparent,
-      expandedHeight: 120,
+      expandedHeight: 140, // Increased
       floating: false,
       pinned: true,
       flexibleSpace: const FlexibleSpaceBar(
-        titlePadding: EdgeInsets.only(left: 20, bottom: 16),
+        titlePadding: EdgeInsets.only(left: 24, bottom: 20),
         title: Text(
           'Catalog',
           style: TextStyle(
             fontFamily: 'Corben',
-            fontSize: 26,
+            fontSize: 32, // Increased from 26
             fontWeight: FontWeight.w900,
             color: AppColors.textPrimary,
-            letterSpacing: -0.5,
+            letterSpacing: -1.0,
           ),
         ),
       ),
